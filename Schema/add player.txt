@@ -1,0 +1,13 @@
+CREATE TABLE bpslo_players (
+    id INT AUTO_INCREMENT PRIMARY KEY,       -- Auto-incrementing unique identifier for each record
+    player_id VARCHAR(255) NOT NULL UNIQUE, -- Unique identifier for the player (e.g., PL12345)
+    team_id VARCHAR(255) NOT NULL,          -- References the team the player belongs to
+    first_name VARCHAR(255) NOT NULL,       -- Player's first name
+    middle_name VARCHAR(255),               -- Player's middle name (optional)
+    last_name VARCHAR(255) NOT NULL,        -- Player's last name
+    age INT NOT NULL,                       -- Player's age
+    sex ENUM('Male', 'Female') NOT NULL,    -- Player's sex (Male or Female)
+    sport VARCHAR(255) NOT NULL,            -- Sport the player participates in
+    division VARCHAR(255) NOT NULL,         -- Division of the player (e.g., Junior, Senior)
+    FOREIGN KEY (team_id) REFERENCES bpslo_teams(team_id) ON DELETE CASCADE -- Links players to teams
+);

@@ -1,0 +1,48 @@
+CREATE TABLE `bpslo_match_winners` (
+    `id` INT AUTO_INCREMENT PRIMARY KEY,         -- Auto-incrementing unique identifier
+    `result_id` VARCHAR(50) NOT NULL,              -- Unique match identifier
+    `team_a_id` INT NOT NULL,                     -- ID of Team A
+    `team_b_id` INT NOT NULL,                     -- ID of Team B
+    `team_a_score` INT NOT NULL,                  -- Score of Team A
+    `team_b_score` INT NOT NULL,                  -- Score of Team B
+    `winner` VARCHAR(255) NOT NULL,               -- The winning team (Team A, Team B, or Draw)
+    `description` TEXT,                           -- Match description
+    `posted_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP -- Timestamp for when the result was posted
+);
+
+
+
+
+
+
+
+
+--  CREATE TABLE `bpslo_match_winners` (
+--     `id` INT AUTO_INCREMENT PRIMARY KEY,
+--     `result_id` VARCHAR(50) NOT NULL,
+--     `team_a` VARCHAR(255) NOT NULL,
+--     `team_b` VARCHAR(255) NOT NULL,
+--     `winner` VARCHAR(255),
+--     `team_a_score` INT NOT NULL,
+--     `team_b_score` INT NOT NULL,
+--     `description` TEXT,
+--     `posted_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+-- );
+
+
+
+
+
+-- OLD-- CREATE TABLE `bpslo_match_winners` (
+--     `id` INT AUTO_INCREMENT PRIMARY KEY,  -- Unique identifier for each match result
+--     `match_id` VARCHAR(255) NOT NULL,  -- Reference to the match from schedules
+--     `team_a` VARCHAR(255) NOT NULL,  -- Name of Team A
+--     `team_b` VARCHAR(255) NOT NULL,  -- Name of Team B
+--     `winner` VARCHAR(255) DEFAULT NULL,  -- The winning team name (nullable if no winner yet)
+--     `team_a_score` INT NOT NULL DEFAULT 0,  -- Score of Team A (default to 0)
+--     `team_b_score` INT NOT NULL DEFAULT 0,  -- Score of Team B (default to 0)
+--     `match_date` DATE NOT NULL,  -- The date of the match
+--     `match_time` TIME NOT NULL,  -- The time of the match
+--     `description` TEXT,  -- Description of the match
+--     `posted_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP  -- Auto-set timestamp when record is created
+-- );

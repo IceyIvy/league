@@ -1,0 +1,10 @@
+CREATE TABLE bpslo_league (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    league_id VARCHAR(50) NOT NULL,
+    who TEXT NOT NULL,
+    what TEXT NOT NULL,
+    `when` DATE NOT NULL,
+    `where` TEXT NOT NULL,
+    description TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

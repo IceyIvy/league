@@ -1,0 +1,19 @@
+CREATE TABLE bpslo_registrations (
+    id INT AUTO_INCREMENT PRIMARY KEY,  -- Auto-incremented primary key
+    application_id VARCHAR(50) UNIQUE,  -- application_id remains unique but not primary
+    sport VARCHAR(50),
+    team_name VARCHAR(100),
+    division VARCHAR(50) NOT NULL,  -- Ensure division is NOT NULL
+    first_name VARCHAR(100),
+    middle_name VARCHAR(100),
+    last_name VARCHAR(100),
+    birth_date DATE,
+    age INT,
+    sex VARCHAR(10),
+    sitio VARCHAR(100),
+    mobile_number VARCHAR(15),
+    email_address VARCHAR(100),
+    photo LONGBLOB,
+    nso LONGBLOB,
+    voter_cert LONGBLOB
+);

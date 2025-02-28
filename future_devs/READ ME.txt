@@ -1,0 +1,24 @@
+RECOMMENDATION
+
+I do not recommend using PHP for future development. Instead, use modern frameworks that offer better scalability, maintainability, and security.
+
+========== Suggested Technologies ==========
+
+Backend: Use frameworks such as Laravel (if sticking with PHP), Node.js or etc.
+
+Frontend: Preferably use Angular, React, etc.
+
+Database: Use MySQL, PostgreSQL, or MongoDB based on project needs.
+
+Hosting & Deployment: Use platforms like AWS, Vercel, Firebase, or DigitalOcean for efficient deployment.
+
+
+
+========== Development Best Practices ==========
+
+Follow MVC or a well-structured architecture.
+
+Ensure proper documentation and version control.
+
+
+********** INSIDE SRC FOLDER ARE THE IMPORTANT FEATURES OF THE SYSTEM *********

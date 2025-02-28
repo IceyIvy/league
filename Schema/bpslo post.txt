@@ -1,0 +1,9 @@
+CREATE TABLE bpslo_posts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    post_id VARCHAR(50) NOT NULL,
+    what TEXT NOT NULL,
+    `when` DATE NOT NULL,
+    `where` TEXT NOT NULL,
+    why TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

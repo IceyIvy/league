@@ -1,0 +1,9 @@
+CREATE TABLE bpslo_organizers (
+    id INT AUTO_INCREMENT PRIMARY KEY,  -- Auto-incrementing ID
+    organizer_id VARCHAR(50) NOT NULL,  -- Organizer ID (to be auto-generated)
+    email VARCHAR(100) UNIQUE NOT NULL,  -- Unique email address
+    password VARCHAR(255) NOT NULL,  -- Hashed password
+    role VARCHAR(50) DEFAULT 'Organizer',  -- Role (defaults to Organizer)
+    last_session TIMESTAMP NULL DEFAULT NULL,  -- Timestamp for the last login session (can be NULL initially)
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP  -- Timestamp of account creation
+);

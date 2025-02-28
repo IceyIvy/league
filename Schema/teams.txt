@@ -1,0 +1,12 @@
+CREATE TABLE bpslo_teams (
+    id INT AUTO_INCREMENT PRIMARY KEY,       -- Auto-incrementing unique identifier for each record
+    team_id VARCHAR(255) NOT NULL UNIQUE,    -- Unique identifier for the team (e.g., TM12345)
+    team_name VARCHAR(255) NOT NULL,         -- Name of the team
+    sport VARCHAR(255) NOT NULL,             -- Sport category (e.g., Basketball, Volleyball)
+    division VARCHAR(255) NOT NULL,           -- Division of the team (e.g., Junior, Senior)
+    player_count INT NOT NULL,
+    wins INT NOT NULL,
+    losses INT NOT NULL
+);
+
+

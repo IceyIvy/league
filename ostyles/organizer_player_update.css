@@ -1,0 +1,357 @@
+
+        :root {
+            --light-green: #B0D77E;
+            --green: #66AD00;
+            --white: #FFFFFF;
+            --font-family: 'Poppins', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: var(--font-family);
+        }
+
+        body, html {
+            height: 100%;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            background-color: var(--white);
+            padding: 20px;
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo {
+            width: 120px;
+            margin-bottom: 20px;
+        }
+
+        .nav-buttons {
+            width: 100%;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        .nav-btn, .logout-btn {
+            width: 100%;
+            padding: 10px 0;
+            border: 2px solid var(--green);
+            background-color: var(--white);
+            color: var(--green);
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .nav-btn:hover, .logout-btn:hover {
+            background-color: var(--green);
+            color: var(--white);
+        }
+
+        .selected {
+            background-color: var(--green);
+            color: var(--white);
+        }
+
+        .logout-btn {
+            margin-top: auto;
+            background-color: var(--green);
+            color: var(--white);
+            border: none;
+        }
+
+        .logout-btn:hover {
+            background-color: var(--white);
+            color: var(--green);
+            border: 2px solid var(--green);
+        }
+
+        .main-content {
+            flex-grow: 1;
+            background-color: var(--light-green);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .main-content h1 {
+            font-size: 30px;
+            color: var(--green);
+            font-weight: 600;
+            margin-bottom: 20px;
+            position: absolute;
+            top: 15px;
+            left: 275px;
+            text-align: left;
+        }
+
+        .registration-form {
+            width: 100%;
+            max-width: 850px;
+            background-color: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-row {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 5px;
+        }
+
+        .form-group,
+        .file-group {
+            flex: 1;
+        }
+
+        .full-width {
+            flex: 2;
+        }
+
+        .form-row label {
+            display: block;
+            color: var(--green);
+            font-weight: 600;
+            margin-bottom: 5px;
+            font-size: 1rem;
+        }
+
+        .name-fields {
+            display: flex;
+            gap: 15px;
+        }
+
+        .name-fields input[type="text"] {
+            flex: 1;
+        }
+
+        .form-row input[type="text"],
+        .form-row input[type="date"],
+        .form-row select,
+        .form-row input[type="file"] {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid var(--green);
+            border-radius: 4px;
+            color: var(--green);
+            font-size: 1.1rem;
+        }
+
+        .requirements {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .requirements h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--green);
+            line-height: 1;
+        }
+
+        .requirements label {
+            display: block;
+            color: var(--green);
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 5px;
+        }
+
+        ::placeholder {
+            color: var(--green);
+        }
+
+        .delete-btn {
+            background-color: red;
+            color: var(--white);
+            padding: 10px 12px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .action-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .update-btn {
+            background-color: var(--green);
+            color: var(--white);
+        }
+
+        .approve-btn {
+            background-color: blue;
+            color: var(--white);
+        }
+
+        .decline-btn {
+            background-color: red;
+            color: var(--white);
+        }
+
+        .reason-textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--green);
+            border-radius: 4px;
+            color: var(--green);
+            font-size: 1.1rem;
+        }
+
+        input[type="file"]::-webkit-file-upload-button {
+            background: var(--green);
+            color: var(--white);
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .center-btn {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        /* Additional styling for images in one row */
+        .image-container {
+            display: flex;
+            gap: 15px; /* Space between images */
+            flex-wrap: wrap; /* Allows wrapping if necessary */
+        }
+        .image-item {
+            max-width: 120px; /* Set width for images */
+            text-align: center;
+        }
+        .image-item img {
+            width: 100%; /* Make the images responsive */
+            height: auto;
+        }
+
+        /* Modal styling */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            width: 400px;
+        }
+        .modal-content input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .modal-content button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 4px;
+        }
+        .modal-content .close-btn {
+            background-color: #f44336;
+            color: #fff;
+        }
+        .modal-content .submit-btn {
+            background-color: #4CAF50;
+            color: #fff;
+        }
+
+        /* General button styling */
+        .action-btn {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .update-btn {
+            background-color: #008CBA;
+        }
+        .edit-btn {
+            padding: 10px 20px;
+            background-color: #f44336;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #logout-form {
+            width: 100%;
+            text-align: center;
+        }
+
+        .logout-btn {
+            margin-top: auto;
+            background-color: var(--green);
+            color: var(--white);
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 20px;
+            width: 100%;
+            display: inline-block;
+            text-align: center;
+            transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+        }
+
+        .logout-btn:hover {
+            background-color: var(--white);
+            color: var(--green);
+            border: 2px solid var(--green);
+        }
+
+        .logout-btn:focus {
+            outline: none;
+        }

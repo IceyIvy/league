@@ -1,0 +1,175 @@
+
+:root {
+    --light-green: #B0D77E;
+    --green: #66AD00;
+    --white: #FFFFFF;
+    --font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+body, html {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    background-color: var(--white);
+    padding: 20px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.nav-buttons {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.nav-btn, .logout-btn {
+    width: 100%;
+    padding: 10px 0;
+    border: 2px solid var(--green);
+    background-color: var(--white);
+    color: var(--green);
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-btn:hover, .logout-btn:hover {
+    background-color: var(--green);
+    color: var(--white);
+}
+
+.selected {
+    background-color: var(--green);
+    color: var(--white);
+}
+
+.logout-btn {
+    margin-top: auto;
+    background-color: var(--green);
+    color: var(--white);
+    border: none;
+}
+
+.logout-btn:hover {
+    background-color: var(--white);
+    color: var(--green);
+    border: 2px solid var(--green);
+}
+
+.main-content {
+    flex-grow: 1;
+    background-color: var(--light-green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    background-color: var(--white);
+    padding: 20px;
+    width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container label {
+    display: block;
+    font-weight: bold;
+    color: var(--green);
+    margin-bottom: 5px;
+}
+
+.form-container input, .form-container select, .form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid var(--green);
+    border-radius: 5px;
+    font-size: 16px;
+    color: var(--green);
+    background-color: var(--white);
+}
+
+.form-container textarea {
+    resize: none;
+    overflow: hidden;
+}
+
+.form-container .submit-btn {
+    width: 100%;
+    padding: 10px 0;
+    background-color: var(--green);
+    color: var(--white);
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.form-container .submit-btn:hover {
+    background-color: var(--white);
+    color: var(--green);
+    border: 2px solid var(--green);
+}
+
+
+#logout-form {
+    width: 100%;
+    text-align: center;
+}
+
+.logout-btn {
+    margin-top: auto;
+    background-color: var(--green);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: var(--white);
+    color: var(--green);
+    border: 2px solid var(--green);
+}
+
+.logout-btn:focus {
+    outline: none;
+}
